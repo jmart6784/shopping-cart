@@ -1,1 +1,92 @@
-/* No CSS *//*# sourceMappingURL=styles.css.map */
+* {
+  font-family: "Titillium Web", sans-serif;
+}
+
+body {
+  background-color: #a9bdd6;
+}
+
+#navbar {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  justify-items: center;
+  background-color: #2271d8;
+  width: 100%;
+  position: fixed;
+  top: 0;
+}
+
+.nav-link {
+  font-size: 22px;
+  text-decoration: none;
+  padding: 10px;
+  margin: 5px 0 5px 0;
+  color: white;
+  border-radius: 8px;
+  font-weight: 900;
+}
+
+#nav-home {
+  font-size: 25px;
+}
+
+#nav-shop {
+  background-color: #63c08a;
+  -ms-grid-column-align: end;
+      justify-self: end;
+  margin-right: 20px;
+}
+
+#nav-shop:hover {
+  background-color: #68d395;
+}
+
+#home-container {
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  justify-items: center;
+  margin: auto;
+  margin-top: 200px;
+  padding: 0 20px 0 20px;
+  background-color: #2271d8;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  border-radius: 20px;
+}
+
+#home-title {
+  font-size: 50px;
+  color: white;
+  margin: 30px 0 30px 0;
+}
+
+#home-sub-title {
+  color: white;
+  margin-bottom: 30px;
+  font-size: 22px;
+}
+
+#home-link {
+  color: white;
+  margin-bottom: 30px;
+  text-decoration: none;
+  background-color: #63c08a;
+  padding: 20px;
+  border-radius: 20px;
+  font-size: 25px;
+}
+
+#shop-div {
+  border: 1px solid red;
+  margin-top: 56px;
+}
+/*# sourceMappingURL=styles.css.map */

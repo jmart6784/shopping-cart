@@ -1,1 +1,91 @@
+$blue: rgb(34, 113, 216);
+$blue-green: rgb(99, 192, 138);
+$blue-green-hover: rgb(104, 211, 149);
+$light-blue: rgb(169, 189, 214);
 
+* {
+  font-family: "Titillium Web", sans-serif;
+}
+
+body {
+  background-color: $light-blue;
+}
+
+// Navigation bar
+#navbar {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  align-items: center;
+  justify-items: center;
+  background-color: $blue;
+  width: 100%;
+  position: fixed;
+  top: 0;
+}
+
+.nav-link {
+  font-size: 22px;
+  text-decoration: none;
+  padding: 10px;
+  margin: 5px 0 5px 0;
+  color: white;
+  border-radius: 8px;
+  font-weight: 900;
+}
+
+#nav-home {
+  font-size: 25px;
+}
+
+#nav-shop {
+  background-color: $blue-green;
+  justify-self: end;
+  margin-right: 20px;
+}
+
+#nav-shop:hover {
+  background-color: $blue-green-hover;
+}
+
+// Home page
+$margin-size: 30px;
+
+#home-container {
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  margin: auto;
+  margin-top: 200px;
+  padding: 0 20px 0 20px;
+  background-color: $blue;
+  width: fit-content;
+  border-radius: 20px;
+}
+
+#home-title {
+  font-size: 50px;
+  color: white;
+  margin: $margin-size 0 $margin-size 0;
+}
+
+#home-sub-title {
+  color: white;
+  margin-bottom: $margin-size;
+  font-size: 22px;
+}
+
+#home-link {
+  color: white;
+  margin-bottom: $margin-size;
+  text-decoration: none;
+  background-color: $blue-green;
+  padding: 20px;
+  border-radius: 20px;
+  font-size: 25px;
+}
+
+// Shop page
+#shop-div {
+  border: 1px solid red;
+  margin-top: 56px;
+}

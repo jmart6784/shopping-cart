@@ -1,11 +1,14 @@
-import React from "react";
+// import React from "react";
+// import Nav from "./components/Nav";
+// import Home from "./components/Home";
 
-function App() {
-  return (
-    <div>
-      <h1>APP</h1>
-    </div>
-  );
-}
+// function App() {
+//   return (
+//     <div>
+//       <Nav />
+//       <Home />
+//     </div>
+//   );
+// }
 
-export default App;
+// export default App;
