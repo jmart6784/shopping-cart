@@ -35,14 +35,23 @@ body {
   font-size: 25px;
 }
 
-#nav-shop {
+#nav-r-links {
+  -ms-grid-column-align: end;
+      justify-self: end;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+}
+
+.nav-shop {
   background-color: #63c08a;
   -ms-grid-column-align: end;
       justify-self: end;
   margin-right: 20px;
 }
 
-#nav-shop:hover {
+.nav-shop:hover {
   background-color: #68d395;
 }
 
@@ -86,6 +95,26 @@ body {
 }
 
 #shop-div {
+  margin-top: 56px;
+}
+
+.listing-grid {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
+  row-gap: 50px;
+}
+
+.listing {
+  height: 250px;
+  width: 300px;
+  background-repeat: no-repeat, repeat;
+  background-size: cover;
+  background-position: center center;
+}
+
+#cart-container {
   border: 1px solid red;
   margin-top: 56px;
 }

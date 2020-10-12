@@ -37,13 +37,19 @@ body {
   font-size: 25px;
 }
 
-#nav-shop {
+#nav-r-links {
+  justify-self: end;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.nav-shop {
   background-color: $blue-green;
   justify-self: end;
   margin-right: 20px;
 }
 
-#nav-shop:hover {
+.nav-shop:hover {
   background-color: $blue-green-hover;
 }
 
@@ -86,6 +92,25 @@ $margin-size: 30px;
 
 // Shop page
 #shop-div {
+  margin-top: 56px;
+}
+
+.listing-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  row-gap: 50px;
+}
+
+.listing {
+  height: 250px;
+  width: 300px;
+  background-repeat: no-repeat, repeat;
+  background-size: cover;
+  background-position: center center;
+}
+
+// Cart page
+#cart-container {
   border: 1px solid red;
   margin-top: 56px;
 }
