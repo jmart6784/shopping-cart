@@ -17,14 +17,6 @@ const Cart = () => {
     }
   };
 
-  console.log(calculate(cart));
-
-  if (calculate(cart) === undefined) {
-    console.log("EMPTY&&&");
-  } else {
-    console.log("DDD");
-  }
-
   return (
     <div id="cart-container">
       <h1>{cart.length === 0 ? "Your cart is Empty" : "My cart"}</h1>
@@ -36,6 +28,10 @@ const Cart = () => {
           </h3>
         </div>
       ))}
+
+      {calculate(cart) !== undefined ? (
+        <h2>{"Total: $" + calculate(cart)}</h2>
+      ) : undefined}
     </div>
   );
 };

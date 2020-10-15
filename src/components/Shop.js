@@ -58,56 +58,65 @@ const Shop = () => {
 
   const decrease = (paramItem) => {
     let tempAry = [].concat(shop);
-    let modified = [];
+
     tempAry.forEach((item) => {
       if (item.name === paramItem.name) {
-        if (item.quantity === 0) {
-          modified.push(item);
-        } else {
+        if (item.quantity !== 0) {
           item.quantity = item.quantity - 1;
           item.stock = item.stock + 1;
-          modified.push(item);
         }
-      } else {
-        modified.push(item);
       }
     });
-    setCart(modified);
+
+    setShop(tempAry);
   };
 
   const increase = (paramItem) => {
     let tempAry = [].concat(shop);
-    let modified = [];
     tempAry.forEach((item) => {
       if (item.name === paramItem.name) {
-        if (item.stock === 0) {
-          modified.push(item);
-        } else {
+        if (item.stock !== 0) {
           item.quantity = item.quantity + 1;
           item.stock = item.stock - 1;
-          modified.push(item);
         }
-      } else {
-        modified.push(item);
       }
     });
-    setCart(modified);
+    setShop(tempAry);
   };
 
   const getQuantity = (paramItem) => {
+    // Increase the quantity of the item that got the "Add to cart" link clicked if the quantity is zero
     if (paramItem.quantity === 0) {
       paramItem.quantity = paramItem.quantity + 1;
     }
 
-    let tempAry = [].concat(shop);
-    let modified = [];
-    tempAry.forEach((item) => {
-      if (item.quantity > 0) {
-        modified.push(item);
+    // Copies of the cart and shop array
+    let tempCart = [].concat(cart);
+    let tempShop = [].concat(shop);
+    let ids = [];
+
+    tempShop.forEach((shopItem) => {
+      if (shopItem.quantity > 0) {
+        if (tempCart.length === 0) {
+          tempCart.push(shopItem);
+        } else {
+          tempCart.forEach((cartItem) => {
+            // Cart IDs array is populated to avoid duplicates when compared to the current shop item. if no duplicate is detected, shopItem is then pushed to tempCart
+            tempCart.forEach((item) => {
+              ids.push(item.id);
+            });
+
+            if (ids.includes(shopItem.id)) {
+              cartItem.quantity = cartItem.quantity + shopItem.quantity;
+            } else {
+              tempCart.push(shopItem);
+            }
+          });
+        }
       }
     });
 
-    setCart(modified);
+    setCart(tempCart);
   };
 
   return (
