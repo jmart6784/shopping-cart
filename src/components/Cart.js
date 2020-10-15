@@ -1,4 +1,5 @@
 import React, { useContext } from "react";
+import { Link } from "react-router-dom";
 import CartContext from "./context/CartContext";
 
 const Cart = () => {
@@ -44,6 +45,16 @@ const Cart = () => {
       ) : (
         ""
       )}
+
+      {cart.length !== 0 ? (
+        <Link
+          onClick={() => setCart([])}
+          to="/thankyou"
+          className="checkout-link"
+        >
+          Checkout
+        </Link>
+      ) : null}
     </div>
   );
 };

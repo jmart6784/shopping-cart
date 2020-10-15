@@ -229,11 +229,46 @@ $margin-size: 30px;
 }
 
 .cart-total {
-  background-color: $blue-green;
+  background-color: $dark-blue;
   color: white;
   padding: 10px;
   border-radius: 10px;
   width: 30%;
   box-sizing: border-box;
   text-align: center;
+}
+
+.checkout-link {
+  background-color: $blue-green;
+  display: block;
+  text-decoration: none;
+  color: white;
+  padding: 10px;
+  border-radius: 10px;
+  width: 30%;
+  box-sizing: border-box;
+  text-align: center;
+  margin-top: 20px;
+  font-size: 25px;
+}
+
+.checkout-link:hover {
+  background-color: $blue-green-hover;
+}
+
+// Thank you page
+.ty-container {
+  border: 1px solid red;
+  height: 99vh;
+  display: grid;
+  align-items: center;
+  justify-items: center;
+}
+
+.ty-title {
+  background-color: $blue;
+  padding: 10px;
+  border-radius: 10px;
+  color: white;
+  font-size: 40px;
 }
