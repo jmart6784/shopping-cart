@@ -1,7 +1,10 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Link } from "react-router-dom";
+import CartContext from "./context/CartContext";
 
 const Nav = () => {
+  const [cart, setCart] = useContext(CartContext);
+
   return (
     <div id="navbar">
       <div></div>
@@ -11,7 +14,7 @@ const Nav = () => {
 
       <div id="nav-r-links">
         <Link className="nav-link nav-shop" to="/cart">
-          Cart
+          {cart.length === 0 ? "Cart" : `Cart(${cart.length})`}
         </Link>
         <Link className="nav-link nav-shop" to="/shop">
           Shop

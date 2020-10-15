@@ -1,3 +1,6 @@
+Practice project focused on React Router. Part of the odin project:
+https://www.theodinproject.com/courses/javascript/lessons/shopping-chart
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
