@@ -19,19 +19,31 @@ const Cart = () => {
 
   return (
     <div id="cart-container">
-      <h1>{cart.length === 0 ? "Your cart is Empty" : "My cart"}</h1>
-      {cart.map((item) => (
-        <div key={item.id}>
-          <h3>
-            Name: {item.name} Quantity: {item.quantity} Price:{" "}
-            {item.price * item.quantity}
-          </h3>
-        </div>
-      ))}
+      <h1 className="cart-page-title">
+        {cart.length === 0 ? "Your cart is Empty" : "My cart"}
+      </h1>
+      <div className="cart-items-container">
+        {cart.map((item) => (
+          <div className="cart-item-div" key={item.id}>
+            <div
+              className="cart-item-image"
+              style={{
+                backgroundImage: `url(${item.image})`,
+              }}
+            ></div>
+            <h3 className="cart-item-details">
+              {item.name} QTY: {item.quantity} Price:{" "}
+              {item.price * item.quantity}
+            </h3>
+          </div>
+        ))}
+      </div>
 
       {calculate(cart) !== undefined ? (
-        <h2>{"Total: $" + calculate(cart)}</h2>
-      ) : undefined}
+        <h2 className="cart-total">{"Total: $" + calculate(cart)}</h2>
+      ) : (
+        ""
+      )}
     </div>
   );
 };

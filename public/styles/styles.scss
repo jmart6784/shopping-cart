@@ -37,6 +37,10 @@ body {
   font-size: 25px;
 }
 
+#nav-home:hover {
+  color: $blue-green-hover;
+}
+
 #nav-r-links {
   justify-self: end;
   display: grid;
@@ -111,6 +115,56 @@ $margin-size: 30px;
 
 // Cart page
 #cart-container {
-  border: 1px solid red;
   margin-top: 56px;
+  display: grid;
+  align-items: center;
+  justify-items: center;
+}
+
+.cart-page-title {
+  margin: 50px auto 50px auto;
+  background-color: $blue;
+  color: white;
+  padding: 10px;
+  border-radius: 10px;
+  text-align: center;
+  width: fit-content;
+}
+
+.cart-items-container {
+  width: 30%;
+}
+
+.cart-item-div {
+  display: grid;
+  grid-template-columns: 0.1fr 1fr;
+  margin-bottom: 20px;
+  align-items: center;
+  width: 100%;
+  background-color: $blue;
+}
+
+.cart-item-image {
+  height: 75px;
+  width: 75px;
+  background-repeat: no-repeat, repeat;
+  background-size: cover;
+  background-position: center center;
+}
+
+.cart-item-details {
+  justify-self: start;
+  margin-left: 20px;
+  color: white;
+  font-size: 25px;
+}
+
+.cart-total {
+  background-color: $blue-green;
+  color: white;
+  padding: 10px;
+  border-radius: 10px;
+  width: 30%;
+  box-sizing: border-box;
+  text-align: center;
 }
