@@ -121,25 +121,33 @@ const Shop = () => {
 
   return (
     <div id="shop-div">
-      <h1>Deals of the Day</h1>
+      <h1 className="shop-title">Deals of the Day</h1>
       <div className="listing-grid">
         {shop.map((item) => (
-          <div key={item.id}>
+          <div className="listing-container" key={item.id}>
             <div
               style={{ backgroundImage: `url(${item.image})` }}
               className="listing"
             ></div>
-            <h3>{item.name}</h3>
-            <h2>${item.price}</h2>
-            <h3>
+            <h3 className="shop-item-info">{item.name}</h3>
+            <h2 className="shop-item-info">${item.price}</h2>
+            <h3 className="shop-item-info">
               {item.stock === 0 ? "Out of Stock" : `In stock(${item.stock})`}
             </h3>
-            <div>
-              <button onClick={() => decrease(item)}>-</button>
-              <span>{item.quantity}</span>
-              <button onClick={() => increase(item)}>+</button>
+            <div className="quantity-container">
+              <button onClick={() => decrease(item)} className="quantity-btn">
+                -
+              </button>
+              <span className="current-quantity">{item.quantity}</span>
+              <button onClick={() => increase(item)} className="quantity-btn">
+                +
+              </button>
             </div>
-            <Link onClick={() => getQuantity(item)} to="/cart">
+            <Link
+              onClick={() => getQuantity(item)}
+              to="/cart"
+              className="shop-add-cart"
+            >
               Add to cart
             </Link>
           </div>

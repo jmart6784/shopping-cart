@@ -2,6 +2,7 @@ $blue: rgb(34, 113, 216);
 $blue-green: rgb(99, 192, 138);
 $blue-green-hover: rgb(104, 211, 149);
 $light-blue: rgb(169, 189, 214);
+$dark-blue: rgb(22, 73, 139);
 
 * {
   font-family: "Titillium Web", sans-serif;
@@ -94,7 +95,21 @@ $margin-size: 30px;
   font-size: 25px;
 }
 
+#home-link:hover {
+  background-color: $blue-green-hover;
+}
+
 // Shop page
+.shop-title {
+  text-align: center;
+  background-color: $blue;
+  color: white;
+  width: fit-content;
+  margin: 100px auto 50px auto;
+  padding: 10px;
+  border-radius: 10px;
+}
+
 #shop-div {
   margin-top: 56px;
 }
@@ -103,6 +118,13 @@ $margin-size: 30px;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   row-gap: 50px;
+  align-items: center;
+  justify-items: center;
+}
+
+.listing-container {
+  background-color: $blue;
+  width: fit-content;
 }
 
 .listing {
@@ -111,6 +133,53 @@ $margin-size: 30px;
   background-repeat: no-repeat, repeat;
   background-size: cover;
   background-position: center center;
+}
+
+.shop-item-info {
+  color: white;
+  margin: 10px 0 5px 10px;
+}
+
+.quantity-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  align-items: center;
+  justify-items: center;
+}
+
+.quantity-btn {
+  width: 80%;
+  background-color: $blue-green;
+  color: white;
+  border: 0px;
+  border-radius: 10px;
+  font-size: 30px;
+  outline: none;
+}
+
+.quantity-btn:hover {
+  background-color: $blue-green-hover;
+}
+
+.current-quantity {
+  color: white;
+  font-size: 30px;
+  text-align: center;
+}
+
+.shop-add-cart {
+  background-color: $blue-green;
+  color: white;
+  display: block;
+  text-decoration: none;
+  text-align: center;
+  margin-top: 15px;
+  padding: 10px 0 10px 0;
+  font-size: 25px;
+}
+
+.shop-add-cart:hover {
+  background-color: $blue-green-hover;
 }
 
 // Cart page
