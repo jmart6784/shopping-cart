@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { BrowserRouter, Switch, Route } from "react-router-dom";
+import { HashRouter, Switch, Route } from "react-router-dom";
 import Home from "./components/Home";
 import Nav from "./components/Nav";
 import Shop from "./components/Shop";
@@ -12,7 +12,7 @@ const Routes = () => {
 
   return (
     <CartContext.Provider value={[cart, setCart]}>
-      <BrowserRouter>
+      <HashRouter>
         <Nav />
         <Switch>
           <Route exact path="/" component={Home} />
@@ -20,7 +20,7 @@ const Routes = () => {
           <Route exact path="/cart" component={Cart} />
           <Route exact path="/thankyou" component={ThankYou} />
         </Switch>
-      </BrowserRouter>
+      </HashRouter>
     </CartContext.Provider>
   );
 };
