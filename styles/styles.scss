@@ -1,0 +1,274 @@
+$blue: rgb(34, 113, 216);
+$blue-green: rgb(99, 192, 138);
+$blue-green-hover: rgb(104, 211, 149);
+$light-blue: rgb(169, 189, 214);
+$dark-blue: rgb(22, 73, 139);
+
+* {
+  font-family: "Titillium Web", sans-serif;
+}
+
+body {
+  background-color: $light-blue;
+}
+
+// Navigation bar
+#navbar {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  align-items: center;
+  justify-items: center;
+  background-color: $blue;
+  width: 100%;
+  position: fixed;
+  top: 0;
+}
+
+.nav-link {
+  font-size: 22px;
+  text-decoration: none;
+  padding: 10px;
+  margin: 5px 0 5px 0;
+  color: white;
+  border-radius: 8px;
+  font-weight: 900;
+}
+
+#nav-home {
+  font-size: 25px;
+}
+
+#nav-home:hover {
+  color: $blue-green-hover;
+}
+
+#nav-r-links {
+  justify-self: end;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.nav-shop {
+  background-color: $blue-green;
+  justify-self: end;
+  margin-right: 20px;
+}
+
+.nav-shop:hover {
+  background-color: $blue-green-hover;
+}
+
+// Home page
+$margin-size: 30px;
+
+#home-container {
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  margin: auto;
+  margin-top: 200px;
+  padding: 0 20px 0 20px;
+  background-color: $blue;
+  width: fit-content;
+  border-radius: 20px;
+}
+
+#home-title {
+  font-size: 50px;
+  color: white;
+  margin: $margin-size 0 $margin-size 0;
+}
+
+#home-sub-title {
+  color: white;
+  margin-bottom: $margin-size;
+  font-size: 22px;
+}
+
+#home-link {
+  color: white;
+  margin-bottom: $margin-size;
+  text-decoration: none;
+  background-color: $blue-green;
+  padding: 20px;
+  border-radius: 20px;
+  font-size: 25px;
+}
+
+#home-link:hover {
+  background-color: $blue-green-hover;
+}
+
+// Shop page
+.shop-title {
+  text-align: center;
+  background-color: $dark-blue;
+  color: white;
+  width: fit-content;
+  margin: 100px auto 50px auto;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+#shop-div {
+  margin-top: 56px;
+}
+
+.listing-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  row-gap: 50px;
+  align-items: center;
+  justify-items: center;
+}
+
+.listing-container {
+  background-color: $blue;
+  width: fit-content;
+}
+
+.listing {
+  height: 250px;
+  width: 300px;
+  background-repeat: no-repeat, repeat;
+  background-size: cover;
+  background-position: center center;
+}
+
+.shop-item-info {
+  color: white;
+  margin: 10px 0 5px 10px;
+}
+
+.quantity-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  align-items: center;
+  justify-items: center;
+}
+
+.quantity-btn {
+  width: 80%;
+  background-color: $blue-green;
+  color: white;
+  border: 0px;
+  border-radius: 10px;
+  font-size: 30px;
+  outline: none;
+}
+
+.quantity-btn:hover {
+  background-color: $blue-green-hover;
+}
+
+.current-quantity {
+  color: white;
+  font-size: 30px;
+  text-align: center;
+}
+
+.shop-add-cart {
+  background-color: $blue-green;
+  color: white;
+  display: block;
+  text-decoration: none;
+  text-align: center;
+  margin-top: 15px;
+  padding: 10px 0 10px 0;
+  font-size: 25px;
+}
+
+.shop-add-cart:hover {
+  background-color: $blue-green-hover;
+}
+
+// Cart page
+#cart-container {
+  margin-top: 56px;
+  display: grid;
+  align-items: center;
+  justify-items: center;
+}
+
+.cart-page-title {
+  margin: 50px auto 50px auto;
+  background-color: $dark-blue;
+  color: white;
+  padding: 10px;
+  border-radius: 10px;
+  text-align: center;
+  width: fit-content;
+}
+
+.cart-items-container {
+  width: 30%;
+}
+
+.cart-item-div {
+  display: grid;
+  grid-template-columns: 0.1fr 1fr;
+  margin-bottom: 20px;
+  align-items: center;
+  width: 100%;
+  background-color: $blue;
+}
+
+.cart-item-image {
+  height: 75px;
+  width: 75px;
+  background-repeat: no-repeat, repeat;
+  background-size: cover;
+  background-position: center center;
+}
+
+.cart-item-details {
+  justify-self: start;
+  margin-left: 20px;
+  color: white;
+  font-size: 25px;
+}
+
+.cart-total {
+  background-color: $dark-blue;
+  color: white;
+  padding: 10px;
+  border-radius: 10px;
+  width: 30%;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.checkout-link {
+  background-color: $blue-green;
+  display: block;
+  text-decoration: none;
+  color: white;
+  padding: 10px;
+  border-radius: 10px;
+  width: 30%;
+  box-sizing: border-box;
+  text-align: center;
+  margin-top: 20px;
+  font-size: 25px;
+}
+
+.checkout-link:hover {
+  background-color: $blue-green-hover;
+}
+
+// Thank you page
+.ty-container {
+  border: 1px solid red;
+  height: 99vh;
+  display: grid;
+  align-items: center;
+  justify-items: center;
+}
+
+.ty-title {
+  background-color: $dark-blue;
+  padding: 10px;
+  border-radius: 10px;
+  color: white;
+  font-size: 40px;
+}
